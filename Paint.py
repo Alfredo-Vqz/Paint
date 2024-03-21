@@ -45,7 +45,7 @@ def rectangle(start, end):
     down()
     begin_fill()
 
-    for _ in range(2):  # Draw two sides
+    for count in range(2):
         forward(end.x - start.x)
         left(90)
         forward(end.y - start.y)
@@ -56,8 +56,16 @@ def rectangle(start, end):
 
 def triangle(start, end):
     """Draw triangle from start to end."""
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
 
+    for count in range(3):
+        forward(end.x - start.x)
+        left(120)
+
+    end_fill()
 
 def tap(x, y):
     """Store starting point or draw shape."""
